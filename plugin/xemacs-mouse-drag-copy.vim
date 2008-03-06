@@ -1,7 +1,7 @@
 " Vim code for .vimrc file
 " Maintainer: Carl Mueller, cmlr@math.rochester.edu
-" Last Change:	November 15, 2007
-" Version:  1.1
+" Last Change:	March 6, 2007
+" Version:  1.2
 "
 "In xemacs, or emacs if you have it enabled, you can speed up copying and 
 "pasting.  Select some text with the left mouse button, while pressing the 
@@ -23,7 +23,7 @@ vnoremap <C-Leftdrag> <Leftdrag>
 vnoremap <C-LeftRelease> <LeftRelease>y:call <SID>LeftReleaseMap()<CR><C-R>"
 function! s:LeftMouseMap()
     let g:thisline=line('.')
-    let g:thiscol=col('.')
+    let g:thiscol=virtcol('.')
     if g:thiscol == strlen(getline(g:thisline))+1
 	let g:atend=1
     else
